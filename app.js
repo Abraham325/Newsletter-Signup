@@ -21,6 +21,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 
     console.log(firstName, lastname, email);
 
+    if (response.statusCode === 200) {
+      res.sendFile(__dirname + "/success.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    } 
     
  })
 
